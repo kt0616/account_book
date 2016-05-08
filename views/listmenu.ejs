@@ -1,0 +1,16 @@
+<div class="listmenu">
+  <ul>
+  <% data.forEach(function(val){ %>
+    <li>
+        <a class="<% if(val.sub_menu){ %>toggle <% } %>menu"<% if(val.menu_link){ %> href="<%= val.menu_link %>"<% } %>><%= val.menu_name %></a>
+        <% if(val.sub_menu && val.sub_menu.length > 0){ %>
+        <ul class="inner child">
+          <% val.sub_menu.forEach(function(sub_val){ %>
+            <li><a href="<%= sub_val.sub_menu_link %>"><%= sub_val.sub_menu_name %></a></li>
+          <% }) %>
+        </ul>
+        <% } %>
+    </li>
+  <% }) %>
+  </ul>
+</div>

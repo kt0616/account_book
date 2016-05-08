@@ -1,0 +1,45 @@
+#tab {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+#tab-head {
+	width: 400px;
+	overflow: hidden;
+}
+#tab-head li {
+	float: left;
+}
+#tab-head li a {
+	display: block;
+	width: 98px;
+	height: 25px;
+	text-align: center;
+}
+#tab-body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: -1px;
+	z-index: -1;
+}
+#tab-b1,#tab-b2,#tab-b3,#tab-b4 {
+	height: 100%;
+	padding: 0px;
+	background: #fff;
+}
+#tab-b2,
+#tab-b3,
+#tab-b4 {
+	display: none;
+}
+.tab1 {
+	background: #eee;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.tab2 {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}

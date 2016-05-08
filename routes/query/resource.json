@@ -1,0 +1,8 @@
+{
+  "DBtype"   : "pg",
+  "host"     : "localhost",
+  "user"     : "account_book",
+  "password" : "account_book",
+  "database" : "account_book",
+  "port"     : "5432"
+}

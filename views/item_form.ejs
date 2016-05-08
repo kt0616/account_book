@@ -1,0 +1,50 @@
+<div class="margin1">
+  <div class="body_container container">
+    <h3 class="payment_add_marginleft form_title"><%= title %></h3>
+    <form class="form-horizontal" role="form" method="post" action="<%= action %>">
+      <input type="hidden" name="method" value="<%= method %>">
+      <input type="hidden" name="user_id" value="<%= user_id %>">
+      <input type="hidden" name="item_id" value="<%= item_id %>">
+
+      <% if(from == 'item_setting'){ %>
+      <!-- 入出金 -->
+      <div class="width_max text_center">
+        <div id='mode' class="btn-group" data-toggle="buttons">
+          <label class="btn two btn-primary <% if(!payment_type || payment_type == 0){ %> active <% } %>">
+            <input type="radio" autocomplete="off" value="0"> 支出
+          </label>
+          <label class="btn two btn-primary  <% if(payment_type && payment_type == 1){ %> active <% } %>">
+            <input type="radio" autocomplete="off" value="1"> 収入
+          </label>
+        </div>
+      </div>
+      <input type="hidden" name="in_out_type" value="<%= payment_type %>">
+      <% } %>
+      <div class="form_item">
+        <div class="form_label">
+          項目名
+        </div>
+        <input class="form-control" type="text" name="name" maxlength="10" value="<%= name %>" required>
+      </div>
+      <div class="form_item text_center">
+        <script>
+        function onSubmitPaymentType(){
+          $('input[name=in_out_type]').val($('#mode .active input[type=radio]').val());
+          return true;
+        }
+        </script>
+        <input type="submit" name="submit" class="btn btn-default" onclick="onSubmitPaymentType();" value="<%= button_name %>">
+      </div>
+    </form>
+    <% if(method == 'update'){ %>
+    <form class="form-horizontal" role="form" method="post" action="<%= action %>">
+      <input type="hidden" name="method" value="delete">
+      <input type="hidden" name="user_id" value="<%= user_id %>">
+      <input type="hidden" name="item_id" value="<%= item_id %>">
+      <div class="del_button center">
+        <input type="submit" name="del_flg" class="btn btn-danger del_button margin_top" value="削除">
+      </div>
+    </from>
+    <% } %>
+  </div>
+</div>

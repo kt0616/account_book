@@ -1,0 +1,98 @@
+<div class="margin2">
+
+  <% if(method == 'update'){ %>
+  <form class="form-horizontal" role="form" method="post" action="<%= action %>">
+    <input type="hidden" name="method" value="delete">
+    <input type="hidden" name="user_id" value="<%= user_id %>">
+    <input type="hidden" name="id" value="<%= id %>">
+    <div class="del_button center">
+      <input type="submit" name="del_flg" class="btn btn-danger del_button margin_top" value="削除">
+    </div>
+  </form>
+  <% } %>
+  <form class="payment" action="<%= action %>" method="post">
+    <input type="hidden" name="user_id" value="<%= user_id %>">
+    <input type="hidden" name="id" value="<%= id %>">
+    <input type="hidden" name="method" value="<%= method %>">
+    <h3 class="payment_add_marginleft form_title"><%= title %></h3>
+    <% if(from == 'diff'){ %><h3 class="payment_add_marginleft">現在の金額を入れてください。</h3><% } %>
+    <div class="form_item">
+      <input class="form-control numeric" type="text" name="payment_display" value="<%= paymentValue %>">
+    </div>
+
+      <div class="form_item width_max text_center">
+        <div id='bank' class="btn-group" data-toggle="buttons">
+          <% bank.forEach(function(bank_item){ %>
+          <label class="btn btn-primary <% if(bank_item.active && bank_item.active == 1){ %> active <% } %>">
+            <input type="radio" autocomplete="off" value="<%= bank_item.bank_id %>"> <%= bank_item.name %>
+          </label>
+          <% }) %>
+        </div>
+      </div>
+      <div class=" <% if(from == 'diff'){ %> noDisplay <% } %>">
+        <div class="form_item width_max text_center">
+          <select class="selectpicker" id="item_type">
+            <% payment_type.forEach(function(type_item){ %>
+              <option value="<%= type_item.type_id %>" in_out_type="<%= type_item.in_out %>" <% if(type_item.active && type_item.active == 1){ %> selected <% } %>><%= type_item.name %></option>
+            <% }) %>
+          </select>
+        </div>
+      </div>
+      <div class=" <% if(from != 'monthly'){ %> noDisplay <% } %>">
+        <div class="form_item">
+          <table class="monthly_form_table">
+            <tr>
+              <td>
+                更新日
+              </td>
+              <td>
+                <select class="selectpicker" id="monthly_day">
+                  <% for(var i=1;i<32;i++){%>
+                    <option value="<%= i %>" <% if(i == rure_day){ %>selected<% } %>><%= i %>日</option>
+                  <% } %>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                名前
+              </td>
+              <td>
+                <input type="text" name="monthly_name" value="<%= name %>">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    <input type="hidden" name="payment_setting" value="0">
+    <input type="hidden" name="bank_id" value="0">
+    <input type="hidden" name="money" value="0">
+    <input type="hidden" name="monthly" value="0">
+    <div class="numericKey numericKey_height<% if(from == 'monthly' && method == 'update'){ %>3<% }else if(from == 'monthly' || method == 'update'){ %>2<% }else{ %>1<% } %>">
+      <table>
+        <tr>
+          <td><input type="button" value=" 7 " onclick="myValue(7);"></td>
+          <td><input type="button" value=" 8 " onclick="myValue(8);"></td>
+          <td><input type="button" value=" 9 " onclick="myValue(9);"></td>
+          <td><input type="button" value=" BS " onclick="myValue('bs');"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value=" 4 " onclick="myValue(4);"></td>
+          <td><input type="button" value=" 5 " onclick="myValue(5);"></td>
+          <td><input type="button" value=" 6 " onclick="myValue(6);"></td>
+          <td><input type="button" value=" CA " onclick="myValue('ca');"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value=" 1 " onclick="myValue(1);"></td>
+          <td><input type="button" value=" 2 " onclick="myValue(2);"></td>
+          <td><input type="button" value=" 3 " onclick="myValue(3);"></td>
+          <td rowspan="2"><input type="submit" value=" 決定 " name="confirm" onclick="setValueInPayment();"></td>
+        </tr>
+        <tr>
+          <td><input type="button" value=" 0 " onclick="myValue(0);"></td>
+          <td colspan="2"><input type="button" value=" 00 " onclick="myValue('00');"></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>

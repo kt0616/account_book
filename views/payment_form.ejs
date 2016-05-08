@@ -1,0 +1,30 @@
+<div class="body_container container">
+  <form class="form-horizontal" role="form" method="post" action="./setting/payment_list">
+    <input type="hidden" name="user_id" value="<%= user_id %>">
+
+    <!-- 入出金 -->
+    <div class="form-group">
+      <label class="form_label control-label">入出金</label>
+      <div class="form_item">
+        <div class="radio">
+          <label>
+            <input type="radio" name="payment_type" id="out" value="0" <% if(!payment_type || payment_type == 0){ %> checked <% } %>>
+            出資
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="payment_type" id="in" value="1" <% if(payment_type && payment_type == 1){ %> checkd <% } %>>
+            収入
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form_label">
+      名前
+    </div>
+    <div class="form_item">
+      <input class="form-control" type="text" placeholder="名前" maxlength="10"><%= name %></input>
+    </div>
+  </form>
+</div>

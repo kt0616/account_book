@@ -1,0 +1,15 @@
+<!--　タブ表示４つまで　→　tab.css　-->
+<script type="text/javascript" src="../js/tab.js"></script>
+<link href="../css/tab.css" rel="stylesheet">
+<div id="tab">
+  <ul id="tab-head">
+    <% for(var i=1;i < data.length + 1; i++){ %>
+    <li id="tab-h<%= i %>"><a href="#tab-b<%= i %>"><%= data[i-1].tab_name %></a></li>
+    <% } %>
+</ul>
+  <div id="tab-body">
+    <% for(var i=1;i < data.length + 1; i++){ %>
+    <div id="tab-b<%= i %>"><%- data[i-1].tab_body %></div>
+    <% } %>
+  </div>
+</div>

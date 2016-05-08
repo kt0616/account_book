@@ -1,0 +1,24 @@
+<div class="payment_list">
+  <div class="payment_list_item new_item">
+    <label>
+    <div onClick="javascript: location.href = '/<%if(func == 'payment'){%>payment<% }else if(func == 'monthly'){ %>setting<% } %>/<%= func %>_add'">
+      <img class="icon-plus-sign" src="../img/new.png">
+      <span class="new_text">新規追加</span>
+    </div>
+  </label>
+  </div>
+  <hr>
+  <% datas.forEach(function(data){ %>
+  <div class="payment_list_item" onClick="javascript: location.href = '/<% if(func == 'monthly'){ %>setting<% }else{ %><%= func %><% } %>/<%= func %>_update?id=<%= data.id %>'">
+    <div class="sub_title_payment">
+      <span class="payment_date"><%= data.date %></span>
+      <span class="bank"><%= data.bank %></span>
+    </div>
+    <div class="main_body_payment">
+      <span class="item_type"><%= data.item_type %></span>
+      <span class="price right <% if(data.price.charAt(0) == '-'){ %>text_red<% } %>"><%= data.price %>円</span>
+    </div>
+  </div>
+  <hr>
+  <% }) %>
+</div>

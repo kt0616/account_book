@@ -1,0 +1,19 @@
+<div class="payment_list">
+  <% datas.forEach(function(data){ %>
+  <div class="zandaka_list_item"  onClick="javascript: location.href = '/setting/bank_update?id=<%= data.id %>'">
+    <div class="main_body_zandaka">
+      <table class="width_max">
+        <tr>
+          <td class="width-30">
+            <span class="zandaka_name"><%= data.bank_name %></span>
+          </td>
+          <td class="text-right width-70">
+            <span class="price <% if(data.price < 0){ %>text_red<% } %>"><%= data.price %>円</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <% }) %>
+</div>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title><% title %></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/main.css" rel="stylesheet">
+  </head>
+  <body class="width_max height_max">
+    <div class="login_form width_max height_max">
+        <p class="main-title"><%= title %></p>
+        <form role="form" action="/login" method="post" class="form-horizontal board-form">
+          <div class="form_item　label">
+            <div class="form_label">
+              ユーザーID
+            </div>
+            <input class="form-control　input" type="text" name="user_id" maxlength="10" required></input>
+          </div>
+
+          <div class="form_item　label">
+            <div class="form_label">
+              パスワード
+            </div>
+            <input class="form-control　input" type="password" name="password" maxlength="20" required></input>
+          </div>
+
+          <button type="submit" class="submit btn btn-default margin_top">ログイン</button>
+        </form>
+        <div class="create_new_account">
+          <a href="/create_account">新規アカウントを登録する</a>
+        </div>
+        <% if (typeof noUser !== 'undefined') { %>
+            <p class="error"><%= noUser %></p>
+        <% } %>
+    </div>
+  </body>
+</html>

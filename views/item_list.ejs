@@ -1,0 +1,21 @@
+<div class="listmenu">
+  <ul>
+    <li>
+        <a class="toggle menu" href="">収入</a>
+        <ul class="inner child">
+          <% type_in.forEach(function(in_sub_val){ %>
+            <li><a href="<%= in_sub_val.sub_menu_link %>"><%= in_sub_val.sub_menu_name %></a></li>
+          <% }) %>
+        </ul>
+    </li>
+
+    <li>
+        <a class="toggle menu" href="">支出</a>
+        <ul class="inner child">
+          <% type_out.forEach(function(out_sub_val){ %>
+            <li><a href="<%= out_sub_val.sub_menu_link %>"><%= out_sub_val.sub_menu_name %></a></li>
+          <% }) %>
+        </ul>
+    </li>
+  </ul>
+</div>

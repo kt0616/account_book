@@ -1,0 +1,39 @@
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<% data.forEach(function(data){ %>
+<% if(data.graph_type == 'pi'){ %>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(draw<%= data.funcName %>);
+  function draw<%= data.funcName %>() {
+    var data = google.visualization.arrayToDataTable(<%- data.graph_data %>);
+
+    var options = {
+      title: '<%= data.graph_title %>',
+      is3D: false
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('<%= data.graph_id %>'));
+    chart.draw(data, options);
+  }
+</script>
+<div class="pi_graph graph" id="<%= data.graph_id %>"></div>
+<% }else if(data.graph_type == 'column'){ %>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(
+        function() {
+            var data = google.visualization.arrayToDataTable(<%- data.graph_data %>);
+
+            var options = {
+                title: '<%= data.graph_title %>',
+                isStacked: true
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('<%= data.graph_id %>'));
+            chart.draw(data, options);
+        }
+    );
+</script>
+<div class="column_graph graph" id="<%= data.graph_id %>"></div>
+<% } %>
+<% }) %>

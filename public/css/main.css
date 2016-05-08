@@ -1,0 +1,251 @@
+html{
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+body{
+  margin-top: 50px;
+}
+.form_label{
+  width: 20%;
+}
+.form_item{
+  width: 80%;
+}
+.body_container{
+  margin-top: 20px;
+}
+.listmenu{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.listmenu *{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.menu:hover {
+  background: #1997a4;
+  text-decoration: none;
+}
+.menu {
+  display: block;
+  position: relative;
+  margin: 1px 0 0;
+  padding: 10px;
+  background: #2cd;
+  color: #fff;
+}
+.listmenu a {
+  display: block;
+}
+.listmenu .child > li {
+    margin: 4px 0;
+    padding: 5px 16px;
+    border-bottom: 1px dotted #dddddd;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.toggle:after {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -14px;
+    content: '>';
+    font-size: 14px;
+    font-weight: bold;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -moz-transition: all, 0.25s, linear;
+    -o-transition: all, 0.25s, linear;
+    -webkit-transition: all, 0.25s, linear;
+    transition: all, 0.25s, linear;
+}
+
+.toggle.active:after {
+    -moz-transform: translate(0, 50%);
+    -ms-transform: translate(0, 50%);
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.text_center{
+  margin: 0px auto;
+  text-align: center;
+}
+.form_item{
+  margin: 15px auto;
+}
+.width_max{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+.height_max{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 100%;
+}
+.btn-group .btn.two{
+  padding: 8px 40px;
+}
+.numericKey table tr td{
+  height: 25%;
+  width: 25%;
+}
+.numericKey table tr td input, .numericKey table{
+  height: 100%;
+  width: 100%;
+}
+.numericKey{
+  position: absolute;
+  bottom: 20px;
+  margin: auto;
+  right: 0px;
+  left: 0px;
+  width: 80%;
+  font-size: 30px;
+}
+.numericKey_height1{
+  height: 350px;
+}
+.numericKey_height2{
+  height: 280px;
+}
+.numericKey_height3{
+  height: 230px;
+}
+.numeric{
+  font-size: 30px;
+  height: 50px;
+  text-align: right;
+}
+.margin1{
+  margin-top: 90px;
+}
+.margin2{
+  margin-top: 70px;
+}
+.payment_add_marginleft{
+  margin-left: 20px;
+}
+.payment_list{
+  margin: 10px 0px;
+}
+hr{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0;
+  border-top: 2px solid #eee;
+}
+.payment_list_item{
+  padding: 10px 20px;
+}
+.bank, .price{
+  margin-left: 10px;
+}
+.item_type{
+  font-size: 20px;
+}
+.price{
+  font-size: 30px;
+}
+.text_red{
+  color: #FF0000;
+}
+.graph{
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+.graph{
+  width: 90%;
+  margin: 0px auto;
+}
+.login_form{
+  background-color: #F0F8FF;
+  text-align: center;
+  padding: 20px;
+}
+.main-title{
+  font-size: 30px;
+}
+.margin_top{
+  margin-top: 30px;
+}
+.del_button{
+  width: 80%;
+  margin: auto;
+  padding: 20;
+}
+.center{
+  text-align: center;
+}
+.zandaka_list_item{
+  padding: 10px 30px;
+}
+.text-right{
+  text-align: right;
+}
+.width-30{
+  width: 30%;
+}
+.width-70{
+  width: 70%;
+}
+.noDisplay{
+  display: none;
+}
+.form_title{
+  font-size: 4;
+}
+.monthly_form_table td{
+  padding: 5px;
+  text-align: left;
+}
+.right{
+  right: 20px;
+  position: absolute;
+}
+.new_item{
+  height: 50px;
+  background-color: #F0F8FF;
+}
+.icon-plus-sign{
+  height: 80%;
+  margin-top: 3px;
+}
+.new_text{
+  height: 100%;
+  position: relative;
+  top: 5px;
+  left: 20px;
+  font-size: 20px;
+  color: #666666;
+}
+hr{
+  width: 100%;
+  margin: auto;
+}
+.new_item label{
+  height: 100%;
+  width: 100%;
+}
+.create_account_table{
+  width: 90%;
+  margin: 20px auto;
+}
+.create_account_table th ,.create_account_table td{
+  padding:  5px;
+}
+.create_new_account{
+  margin-top: 10px;
+}
