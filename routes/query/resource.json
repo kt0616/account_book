@@ -1,5 +1,5 @@
 {
-  "DBtype"   : "mysql",
+  "DBtype"   : "pg",
   "host"     : "localhost",
   "user"     : "account_book",
   "password" : "account_book",
