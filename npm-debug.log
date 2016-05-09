@@ -25,22 +25,22 @@
 16 verbose addNameRange registry:https://registry.npmjs.org/bcrypt not in flight; fetching
 17 verbose request uri https://registry.npmjs.org/bcrypt
 18 verbose request no auth needed
-19 info attempt registry request try #1 at 23:32:31
-20 verbose request id 75b35e5ee68cb583
+19 info attempt registry request try #1 at 23:47:01
+20 verbose request id e612253d6d70f347
 21 verbose etag "6UCMSUJZ5IXVB23V76HOLPAUR"
 22 http request GET https://registry.npmjs.org/bcrypt
 23 http 304 https://registry.npmjs.org/bcrypt
 24 silly get cb [ 304,
-24 silly get   { date: 'Mon, 09 May 2016 14:32:34 GMT',
+24 silly get   { date: 'Mon, 09 May 2016 14:47:04 GMT',
 24 silly get     via: '1.1 varnish',
 24 silly get     'cache-control': 'max-age=300',
 24 silly get     etag: '"6UCMSUJZ5IXVB23V76HOLPAUR"',
-24 silly get     age: '50',
+24 silly get     age: '0',
 24 silly get     connection: 'keep-alive',
-24 silly get     'x-served-by': 'cache-nrt6133-NRT',
+24 silly get     'x-served-by': 'cache-nrt6130-NRT',
 24 silly get     'x-cache': 'HIT',
-24 silly get     'x-cache-hits': '51',
-24 silly get     'x-timer': 'S1462804354.893336,VS0,VE0',
+24 silly get     'x-cache-hits': '1',
+24 silly get     'x-timer': 'S1462805224.532374,VS0,VE542',
 24 silly get     vary: 'Accept-Encoding' } ]
 25 verbose etag https://registry.npmjs.org/bcrypt from cache
 26 verbose get saving bcrypt to C:\Users\ktate\AppData\Roaming\npm-cache\registry.npmjs.org\bcrypt\.cache.json
@@ -195,114 +195,85 @@
 88 info preinstall bcrypt@0.8.6
 89 silly prepareForInstallMany adding bindings@1.2.1 from bcrypt dependencies
 90 silly prepareForInstallMany adding nan@2.2.1 from bcrypt dependencies
-91 silly cache add args [ 'bindings@1.2.1', null ]
-92 verbose cache add spec bindings@1.2.1
-93 silly cache add parsed spec { raw: 'bindings@1.2.1',
+91 silly cache add args [ 'nan@2.2.1', null ]
+92 verbose cache add spec nan@2.2.1
+93 silly cache add parsed spec { raw: 'nan@2.2.1',
 93 silly cache add   scope: null,
-93 silly cache add   name: 'bindings',
-93 silly cache add   rawSpec: '1.2.1',
-93 silly cache add   spec: '1.2.1',
+93 silly cache add   name: 'nan',
+93 silly cache add   rawSpec: '2.2.1',
+93 silly cache add   spec: '2.2.1',
 93 silly cache add   type: 'version' }
-94 verbose addNamed bindings@1.2.1
-95 silly addNamed semver.valid 1.2.1
-96 silly addNamed semver.validRange 1.2.1
-97 silly mapToRegistry name bindings
+94 verbose addNamed nan@2.2.1
+95 silly addNamed semver.valid 2.2.1
+96 silly addNamed semver.validRange 2.2.1
+97 silly mapToRegistry name nan
 98 silly mapToRegistry using default registry
 99 silly mapToRegistry registry https://registry.npmjs.org/
-100 silly mapToRegistry uri https://registry.npmjs.org/bindings
-101 verbose addNameVersion registry:https://registry.npmjs.org/bindings not in flight; fetching
-102 silly cache add args [ 'nan@2.2.1', null ]
-103 verbose cache add spec nan@2.2.1
-104 silly cache add parsed spec { raw: 'nan@2.2.1',
+100 silly mapToRegistry uri https://registry.npmjs.org/nan
+101 verbose addNameVersion registry:https://registry.npmjs.org/nan not in flight; fetching
+102 silly cache add args [ 'bindings@1.2.1', null ]
+103 verbose cache add spec bindings@1.2.1
+104 silly cache add parsed spec { raw: 'bindings@1.2.1',
 104 silly cache add   scope: null,
-104 silly cache add   name: 'nan',
-104 silly cache add   rawSpec: '2.2.1',
-104 silly cache add   spec: '2.2.1',
+104 silly cache add   name: 'bindings',
+104 silly cache add   rawSpec: '1.2.1',
+104 silly cache add   spec: '1.2.1',
 104 silly cache add   type: 'version' }
-105 verbose addNamed nan@2.2.1
-106 silly addNamed semver.valid 2.2.1
-107 silly addNamed semver.validRange 2.2.1
-108 silly mapToRegistry name nan
+105 verbose addNamed bindings@1.2.1
+106 silly addNamed semver.valid 1.2.1
+107 silly addNamed semver.validRange 1.2.1
+108 silly mapToRegistry name bindings
 109 silly mapToRegistry using default registry
 110 silly mapToRegistry registry https://registry.npmjs.org/
-111 silly mapToRegistry uri https://registry.npmjs.org/nan
-112 verbose addNameVersion registry:https://registry.npmjs.org/nan not in flight; fetching
+111 silly mapToRegistry uri https://registry.npmjs.org/bindings
+112 verbose addNameVersion registry:https://registry.npmjs.org/bindings not in flight; fetching
 113 verbose request uri https://registry.npmjs.org/bindings
 114 verbose request no auth needed
-115 info attempt registry request try #1 at 23:32:31
+115 info attempt registry request try #1 at 23:47:02
 116 verbose etag "1LLBF9OH58DLBEL4629U6032D"
 117 http request GET https://registry.npmjs.org/bindings
 118 verbose request uri https://registry.npmjs.org/nan
 119 verbose request no auth needed
-120 info attempt registry request try #1 at 23:32:31
+120 info attempt registry request try #1 at 23:47:02
 121 verbose etag "24B26O57Z0ASCDVIYEYKA8KVW"
 122 http request GET https://registry.npmjs.org/nan
-123 http 304 https://registry.npmjs.org/bindings
+123 http 304 https://registry.npmjs.org/nan
 124 silly get cb [ 304,
-124 silly get   { date: 'Mon, 09 May 2016 14:32:35 GMT',
+124 silly get   { date: 'Mon, 09 May 2016 14:47:05 GMT',
 124 silly get     via: '1.1 varnish',
 124 silly get     'cache-control': 'max-age=300',
-124 silly get     etag: '"1LLBF9OH58DLBEL4629U6032D"',
-124 silly get     age: '67',
+124 silly get     etag: '"24B26O57Z0ASCDVIYEYKA8KVW"',
+124 silly get     age: '40',
 124 silly get     connection: 'keep-alive',
-124 silly get     'x-served-by': 'cache-nrt6126-NRT',
+124 silly get     'x-served-by': 'cache-nrt6134-NRT',
 124 silly get     'x-cache': 'HIT',
-124 silly get     'x-cache-hits': '1',
-124 silly get     'x-timer': 'S1462804355.094179,VS0,VE0',
+124 silly get     'x-cache-hits': '2',
+124 silly get     'x-timer': 'S1462805225.343736,VS0,VE0',
 124 silly get     vary: 'Accept-Encoding' } ]
-125 verbose etag https://registry.npmjs.org/bindings from cache
-126 verbose get saving bindings to C:\Users\ktate\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
-127 http 304 https://registry.npmjs.org/nan
+125 verbose etag https://registry.npmjs.org/nan from cache
+126 verbose get saving nan to C:\Users\ktate\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+127 http 304 https://registry.npmjs.org/bindings
 128 silly get cb [ 304,
-128 silly get   { date: 'Mon, 09 May 2016 14:32:35 GMT',
+128 silly get   { date: 'Mon, 09 May 2016 14:47:05 GMT',
 128 silly get     via: '1.1 varnish',
 128 silly get     'cache-control': 'max-age=300',
-128 silly get     etag: '"24B26O57Z0ASCDVIYEYKA8KVW"',
-128 silly get     age: '143',
+128 silly get     etag: '"1LLBF9OH58DLBEL4629U6032D"',
+128 silly get     age: '227',
 128 silly get     connection: 'keep-alive',
-128 silly get     'x-served-by': 'cache-nrt6121-NRT',
+128 silly get     'x-served-by': 'cache-nrt6120-NRT',
 128 silly get     'x-cache': 'HIT',
-128 silly get     'x-cache-hits': '4',
-128 silly get     'x-timer': 'S1462804355.101873,VS0,VE0',
+128 silly get     'x-cache-hits': '1',
+128 silly get     'x-timer': 'S1462805225.351756,VS0,VE0',
 128 silly get     vary: 'Accept-Encoding' } ]
-129 verbose etag https://registry.npmjs.org/nan from cache
-130 verbose get saving nan to C:\Users\ktate\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
-131 silly cache afterAdd bindings@1.2.1
-132 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json not in flight; writing
-133 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
-134 silly cache afterAdd nan@2.2.1
-135 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\nan\2.2.1\package\package.json not in flight; writing
-136 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\nan\2.2.1\package\package.json written
-137 silly install resolved [ { name: 'bindings',
-137 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
-137 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
-137 silly install resolved     version: '1.2.1',
-137 silly install resolved     author:
-137 silly install resolved      { name: 'Nathan Rajlich',
-137 silly install resolved        email: 'nathan@tootallnate.net',
-137 silly install resolved        url: 'http://tootallnate.net' },
-137 silly install resolved     repository:
-137 silly install resolved      { type: 'git',
-137 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
-137 silly install resolved     main: './bindings.js',
-137 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
-137 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
-137 silly install resolved     license: 'MIT',
-137 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
-137 silly install resolved     _id: 'bindings@1.2.1',
-137 silly install resolved     scripts: {},
-137 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
-137 silly install resolved     _from: 'bindings@1.2.1',
-137 silly install resolved     _npmVersion: '1.4.14',
-137 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
-137 silly install resolved     maintainers: [ [Object], [Object] ],
-137 silly install resolved     dist:
-137 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
-137 silly install resolved        tarball: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
-137 silly install resolved     directories: {},
-137 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
-137 silly install resolved     readme: 'ERROR: No README data found!' },
-137 silly install resolved   { name: 'nan',
+129 verbose etag https://registry.npmjs.org/bindings from cache
+130 verbose get saving bindings to C:\Users\ktate\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
+131 silly cache afterAdd nan@2.2.1
+132 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\nan\2.2.1\package\package.json not in flight; writing
+133 silly cache afterAdd bindings@1.2.1
+134 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json not in flight; writing
+135 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\nan\2.2.1\package\package.json written
+136 verbose afterAdd C:\Users\ktate\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
+137 silly install resolved [ { name: 'nan',
 137 silly install resolved     version: '2.2.1',
 137 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 4 compatibility',
 137 silly install resolved     main: 'include_dirs.js',
@@ -344,47 +315,76 @@
 137 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
 137 silly install resolved        tmp: 'tmp/nan-2.2.1.tgz_1459265439909_0.12396649201400578' },
 137 silly install resolved     directories: {},
+137 silly install resolved     readme: 'ERROR: No README data found!' },
+137 silly install resolved   { name: 'bindings',
+137 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+137 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+137 silly install resolved     version: '1.2.1',
+137 silly install resolved     author:
+137 silly install resolved      { name: 'Nathan Rajlich',
+137 silly install resolved        email: 'nathan@tootallnate.net',
+137 silly install resolved        url: 'http://tootallnate.net' },
+137 silly install resolved     repository:
+137 silly install resolved      { type: 'git',
+137 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+137 silly install resolved     main: './bindings.js',
+137 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+137 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+137 silly install resolved     license: 'MIT',
+137 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+137 silly install resolved     _id: 'bindings@1.2.1',
+137 silly install resolved     scripts: {},
+137 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+137 silly install resolved     _from: 'bindings@1.2.1',
+137 silly install resolved     _npmVersion: '1.4.14',
+137 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+137 silly install resolved     maintainers: [ [Object], [Object] ],
+137 silly install resolved     dist:
+137 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+137 silly install resolved        tarball: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+137 silly install resolved     directories: {},
+137 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
 137 silly install resolved     readme: 'ERROR: No README data found!' } ]
-138 info install bindings@1.2.1 into C:\workspace\accountBook\node_modules\bcrypt
-139 info install nan@2.2.1 into C:\workspace\accountBook\node_modules\bcrypt
-140 info installOne bindings@1.2.1
-141 verbose installOne of bindings to C:\workspace\accountBook\node_modules\bcrypt not in flight; installing
-142 info installOne nan@2.2.1
-143 verbose installOne of nan to C:\workspace\accountBook\node_modules\bcrypt not in flight; installing
-144 verbose lock using C:\Users\ktate\AppData\Roaming\npm-cache\_locks\bindings-e98e3fe9a430ea45.lock for C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-145 verbose lock using C:\Users\ktate\AppData\Roaming\npm-cache\_locks\nan-0d466a0a202732fe.lock for C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
-146 silly install write writing bindings 1.2.1 to C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-147 silly cache addNamed cb bindings@1.2.1
-148 verbose unbuild node_modules\bcrypt\node_modules\bindings
-149 silly install write writing nan 2.2.1 to C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
-150 silly cache addNamed cb nan@2.2.1
-151 verbose unbuild node_modules\bcrypt\node_modules\nan
-152 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings is being purged from base C:\workspace\accountBook
-153 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-154 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan is being purged from base C:\workspace\accountBook
-155 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
-156 verbose tar unpack C:\Users\ktate\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
-157 verbose tar unpacking to C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-158 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings is being purged
+138 info install nan@2.2.1 into C:\workspace\accountBook\node_modules\bcrypt
+139 info install bindings@1.2.1 into C:\workspace\accountBook\node_modules\bcrypt
+140 info installOne nan@2.2.1
+141 verbose installOne of nan to C:\workspace\accountBook\node_modules\bcrypt not in flight; installing
+142 info installOne bindings@1.2.1
+143 verbose installOne of bindings to C:\workspace\accountBook\node_modules\bcrypt not in flight; installing
+144 verbose lock using C:\Users\ktate\AppData\Roaming\npm-cache\_locks\nan-0d466a0a202732fe.lock for C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
+145 silly install write writing nan 2.2.1 to C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
+146 silly cache addNamed cb nan@2.2.1
+147 verbose unbuild node_modules\bcrypt\node_modules\nan
+148 verbose lock using C:\Users\ktate\AppData\Roaming\npm-cache\_locks\bindings-e98e3fe9a430ea45.lock for C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
+149 silly install write writing bindings 1.2.1 to C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
+150 silly cache addNamed cb bindings@1.2.1
+151 verbose unbuild node_modules\bcrypt\node_modules\bindings
+152 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan is being purged from base C:\workspace\accountBook
+153 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
+154 verbose tar unpack C:\Users\ktate\AppData\Roaming\npm-cache\nan\2.2.1\package.tgz
+155 verbose tar unpacking to C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
+156 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan is being purged
+157 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
+158 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings is being purged from base C:\workspace\accountBook
 159 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-160 verbose tar unpack C:\Users\ktate\AppData\Roaming\npm-cache\nan\2.2.1\package.tgz
-161 verbose tar unpacking to C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
-162 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan is being purged
-163 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\nan
-164 silly gunzTarPerm modes [ '777', '666' ]
+160 silly gunzTarPerm modes [ '777', '666' ]
+161 verbose tar unpack C:\Users\ktate\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+162 verbose tar unpacking to C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
+163 silly gentlyRm C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings is being purged
+164 verbose gentlyRm don't care about contents; nuking C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
 165 silly gunzTarPerm modes [ '777', '666' ]
 166 silly gunzTarPerm extractEntry package.json
-167 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+167 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
 168 silly gunzTarPerm extractEntry package.json
-169 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
-170 silly gunzTarPerm extractEntry README.md
-171 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
-172 silly gunzTarPerm extractEntry bindings.js
-173 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
-174 silly gunzTarPerm extractEntry include_dirs.js
-175 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
-176 silly gunzTarPerm extractEntry nan_converters.h
-177 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+169 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+170 silly gunzTarPerm extractEntry include_dirs.js
+171 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+172 silly gunzTarPerm extractEntry nan_converters.h
+173 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+174 silly gunzTarPerm extractEntry README.md
+175 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+176 silly gunzTarPerm extractEntry bindings.js
+177 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
 178 silly gunzTarPerm extractEntry LICENSE.md
 179 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
 180 silly gunzTarPerm extractEntry .dntrc
@@ -395,33 +395,33 @@
 185 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
 186 silly gunzTarPerm extractEntry doc/.build.sh
 187 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 511 ]
-188 info preinstall bindings@1.2.1
-189 silly install resolved []
-190 verbose about to build C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-191 info build C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-192 verbose linkStuff [ false,
-192 verbose linkStuff   false,
-192 verbose linkStuff   false,
-192 verbose linkStuff   'C:\\workspace\\accountBook\\node_modules\\bcrypt\\node_modules' ]
-193 info linkStuff bindings@1.2.1
-194 verbose linkBins bindings@1.2.1
-195 verbose linkMans bindings@1.2.1
-196 verbose rebuildBundles bindings@1.2.1
-197 silly gunzTarPerm extractEntry doc/buffers.md
-198 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
-199 silly gunzTarPerm extractEntry doc/callback.md
-200 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
-201 info install bindings@1.2.1
-202 info postinstall bindings@1.2.1
-203 verbose unlock done using C:\Users\ktate\AppData\Roaming\npm-cache\_locks\bindings-e98e3fe9a430ea45.lock for C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
-204 silly gunzTarPerm extractEntry doc/converters.md
-205 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
-206 silly gunzTarPerm extractEntry doc/errors.md
-207 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
-208 silly gunzTarPerm extractEntry doc/maybe_types.md
-209 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
-210 silly gunzTarPerm extractEntry doc/methods.md
-211 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+188 silly gunzTarPerm extractEntry doc/buffers.md
+189 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+190 silly gunzTarPerm extractEntry doc/callback.md
+191 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+192 silly gunzTarPerm extractEntry doc/converters.md
+193 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+194 silly gunzTarPerm extractEntry doc/errors.md
+195 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+196 info preinstall bindings@1.2.1
+197 silly gunzTarPerm extractEntry doc/maybe_types.md
+198 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+199 silly gunzTarPerm extractEntry doc/methods.md
+200 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+201 silly install resolved []
+202 verbose about to build C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
+203 info build C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
+204 verbose linkStuff [ false,
+204 verbose linkStuff   false,
+204 verbose linkStuff   false,
+204 verbose linkStuff   'C:\\workspace\\accountBook\\node_modules\\bcrypt\\node_modules' ]
+205 info linkStuff bindings@1.2.1
+206 verbose linkBins bindings@1.2.1
+207 verbose linkMans bindings@1.2.1
+208 verbose rebuildBundles bindings@1.2.1
+209 info install bindings@1.2.1
+210 info postinstall bindings@1.2.1
+211 verbose unlock done using C:\Users\ktate\AppData\Roaming\npm-cache\_locks\bindings-e98e3fe9a430ea45.lock for C:\workspace\accountBook\node_modules\bcrypt\node_modules\bindings
 212 silly gunzTarPerm extractEntry doc/asyncworker.md
 213 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
 214 silly gunzTarPerm extractEntry doc/node_misc.md

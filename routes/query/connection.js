@@ -21,8 +21,8 @@ switch (dbTypeName) {
     });
     break;
   case "pg":
-    var conString = "tcp://"+property.user+":"+property.password+"@"+property.host+":"+property.port+"/"+property.database;
-    // var conString = "postgres://sjzcxqektjbxwm:-gnC3mbH8Hjn4cKv2ot2IATdiD@ec2-50-19-209-46.compute-1.amazonaws.com:5432/d39l9uultmtm81";
+    // var conString = "tcp://"+property.user+":"+property.password+"@"+property.host+":"+property.port+"/"+property.database;
+    var conString = "postgres://sjzcxqektjbxwm:-gnC3mbH8Hjn4cKv2ot2IATdiD@ec2-50-19-209-46.compute-1.amazonaws.com:5432/d39l9uultmtm81";
     client = new dbType.Client(conString);
     client.connect(function(err){
       if (err) {
