@@ -49,7 +49,23 @@ exports.insertPerson = function(person, callbackFunc){
         return;
       }
       result = conn.getSelectReturnValue(result);
-      if(callbackFunc && typeof callbackFunc == 'function') callbackFunc(result.insertId);
+      if(result.insertId){
+        if(callbackFunc && typeof callbackFunc == 'function') callbackFunc(result.insertId);
+        createItemSettingInitialize(result.insertId);
+      }else{
+        var _sql = 'select last_value from person_person_id_seq';
+        console.log('insertPerson:'+_sql);
+        conn.getConnection().query(_sql, function(err, _result){
+          if (err){
+            console.log('SQL ERROR:'+err);
+            return;
+          }
+          _result = conn.getSelectReturnValue(_result);
+          if(callbackFunc && typeof callbackFunc == 'function') callbackFunc(_result[0].last_value);
+          createItemSettingInitialize(_result[0].last_value);
+        })
+      }
+
     });
   });
 }
@@ -65,4 +81,55 @@ exports.ajax_user_id_check = function(user_id, callbackFunc){
     result = conn.getSelectReturnValue(result);
     if(callbackFunc && typeof callbackFunc == 'function') callbackFunc(result);
   });
+}
+
+function createItemSettingInitialize(user_id){
+  var sql1 = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, IN_OUT_TYPE, VIEW_ORDER, NAME) VALUES(-99,"+user_id+",0,1,'不明金')";
+  var sql2 = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, IN_OUT_TYPE, VIEW_ORDER, NAME) VALUES(-98,"+user_id+",1,1,'不明金')";
+  var sql3 = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, IN_OUT_TYPE, VIEW_ORDER, NAME) VALUES(-97,"+user_id+",0,1,'振替')";
+  var sql4 = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, IN_OUT_TYPE, VIEW_ORDER, NAME) VALUES(-96,"+user_id+",1,1,'振替')";
+  var sql5 = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, IN_OUT_TYPE, VIEW_ORDER, NAME) VALUES(-95,"+user_id+",0,1,'初期設定金額')";
+  var sql6 = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, IN_OUT_TYPE, VIEW_ORDER, NAME) VALUES(-94,"+user_id+",1,1,'初期設定金額')";
+  console.log("createItemSettingInitialize:"+sql1);
+  console.log("createItemSettingInitialize:"+sql2);
+  console.log("createItemSettingInitialize:"+sql3);
+  console.log("createItemSettingInitialize:"+sql4);
+  console.log("createItemSettingInitialize:"+sql5);
+  console.log("createItemSettingInitialize:"+sql6);
+  conn.getConnection().query(sql1, function(err, result) {
+    if (err){
+      console.log('SQL ERROR:'+err);
+      return null;
+    }
+  })
+  conn.getConnection().query(sql2, function(err, result) {
+    if (err){
+      console.log('SQL ERROR:'+err);
+      return null;
+    }
+  })
+  conn.getConnection().query(sql3, function(err, result) {
+    if (err){
+      console.log('SQL ERROR:'+err);
+      return null;
+    }
+  })
+  conn.getConnection().query(sql4, function(err, result) {
+    if (err){
+      console.log('SQL ERROR:'+err);
+      return null;
+    }
+  })
+  conn.getConnection().query(sql5, function(err, result) {
+    if (err){
+      console.log('SQL ERROR:'+err);
+      return null;
+    }
+  })
+  conn.getConnection().query(sql6, function(err, result) {
+    if (err){
+      console.log('SQL ERROR:'+err);
+      return null;
+    }
+  })
 }

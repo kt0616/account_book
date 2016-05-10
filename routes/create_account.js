@@ -25,6 +25,7 @@ router.post('/', function(req, res, next) {
   person.user_name = req.body.name;
   person.user_id = req.body.user_id;
   person.password = req.body.password;
+  console.log(person)
   var callbackFunc = function(result){
     if(result){
       req.session.user_id = result;
