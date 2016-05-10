@@ -23,6 +23,7 @@ router.get('/', function(req, res, next) {
 function printList(user_id, res){
   var callbackFunc = function(user_name){
     var _callbackFunc = function(result){
+      console.log(result)
       var in_type_item = new Array();
       var out_type_item = new Array();
       result.forEach(function(item){

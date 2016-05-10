@@ -2,7 +2,7 @@ var conn = require("./connection.js");
 
 exports.getItemSettingList = function(user_id, callbackFunc){
   if(!user_id) return null;
-  var sql = "SELECT ITEM_SETTING_ID, NAME, IN_OUT_TYPE FROM ITEM_SETTING WHERE PERSON_ID = " + user_id + " AND DEL_FLG = 0 AND ITEM_SETTING_ID > 0 ORDER BY IN_OUT_TYPE, VIEW_ORDER";
+  var sql = "SELECT ITEM_SETTING_ID, NAME, IN_OUT_TYPE FROM ITEM_SETTING WHERE PERSON_ID = " + user_id + " AND DEL_FLG = 0 AND ITEM_SETTING_ID >= 0 ORDER BY IN_OUT_TYPE, VIEW_ORDER";
   console.log("SQL:getItemSettingList  "+sql);
   conn.getConnection().query(sql, function(err, result) {
     if (err){
@@ -29,7 +29,7 @@ exports.getItemSettingByItemId = function(user_id, item_id, callbackFunc){
 }
 
 exports.insertItemSetting = function(item, callbackFunc){
-  var sql = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, NAME, IN_OUT_TYPE, VIEW_ORDER) VALUES((SELECT coalesce(MAX_CODE + 1, 1) FROM (SELECT MAX(ITEM_SETTING_ID) MAX_CODE FROM ITEM_SETTING WHERE PERSON_ID = "+item.user_id+") T1), "+item.user_id+", '"+item.name+"', "+item.in_out_type+", (SELECT coalesce(MAX_CODE + 1, 1) FROM (SELECT MAX(VIEW_ORDER) MAX_CODE FROM ITEM_SETTING WHERE PERSON_ID = "+item.user_id+")　T2))";
+  var sql = "INSERT INTO ITEM_SETTING (ITEM_SETTING_ID, PERSON_ID, NAME, IN_OUT_TYPE, VIEW_ORDER) VALUES((SELECT CASE WHEN coalesce(MAX_CODE + 1, 1) >= 0 THEN coalesce(MAX_CODE + 1, 1) ELSE 0 END FROM (SELECT MAX(ITEM_SETTING_ID) MAX_CODE FROM ITEM_SETTING WHERE PERSON_ID = "+item.user_id+") T1), "+item.user_id+", '"+item.name+"', "+item.in_out_type+", (SELECT coalesce(MAX_CODE + 1, 1) FROM (SELECT MAX(VIEW_ORDER) MAX_CODE FROM ITEM_SETTING WHERE PERSON_ID = "+item.user_id+")　T2))";
   console.log("SQL:insertItemSetting  "+sql);
   conn.getConnection().query(sql, function(err, result) {
     if (err){
