@@ -1,6 +1,7 @@
 var express = require('express');
 var ejs = require('ejs');
 var fs = require('fs');
+var crypto = require("crypto");
 var session = require('express-session');
 var personSQL = require('./query/person.js');
 var router = express.Router();
@@ -22,7 +23,10 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   var user_id = req.body.user_id;
-  var password = req.body.password;
+  var sha512 = crypto.createHash('sha512');
+  sha512.update(req.body.password)
+  var hash = sha512.digest('hex')
+  var password = hash;
   var callbackFunc = function(result){
     var userId = result.length == 1? result[0].person_id: false;
     console.log(result)

@@ -73,3 +73,4 @@ create table monthly(
 
 
 create view zandaka as select bank.bank_id, bank.view_order, bank.del_flg, bank.person_id, bank_name, coalesce(sum(price),0) zandaka from bank left join payment on (bank.person_id = payment.person_id and bank.bank_id = payment.bank_id) group by bank.unique_id;
+alter table person alter column password type varchar(150);
