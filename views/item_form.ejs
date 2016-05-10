@@ -26,6 +26,14 @@
         </div>
         <input class="form-control" type="text" name="name" maxlength="10" value="<%= name %>" required>
       </div>
+      <% if(from_bank_add){ %>
+      <div class="form_item bank_initial_sum">
+        <div class="label">
+          初期設定金額
+        </div>
+        <input class="form-control" type="text" name="bank_initial" maxlength="10" value="0" required>
+      </div>
+      <% } %>
       <div class="form_item text_center">
         <script>
         function onSubmitPaymentType(){

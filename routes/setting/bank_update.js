@@ -31,7 +31,8 @@ router.get('/', function(req, res, next) {
             button_name: '更新',
             action: '/setting/bank_update',
             payment_type: '',
-            name: result_bank.bank_name
+            name: result_bank.bank_name,
+            from_bank_add: false
           })
       });
       res.writeHead(200, {'Content-Type': 'text/html'});

@@ -29,7 +29,8 @@ router.get('/', function(req, res, next) {
           button_name: '登録',
           action: '/setting/bank_add',
           payment_type: '',
-          name: ''
+          name: '',
+          from_bank_add: true
         })
     });
     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -46,6 +47,7 @@ router.post('/', function(req, res, next) {
     res.redirect('/login');
   }
   item.name = req.body['name'];
+  item.bank_initial = req.body['bank_initial'];
   var callbackFunc = function(){
     res.redirect('/zandaka/ref');
   }

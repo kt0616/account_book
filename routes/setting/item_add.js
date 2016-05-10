@@ -29,7 +29,8 @@ router.get('/', function(req, res, next) {
           button_name: '登録',
           action: './item_add',
           payment_type: 0,
-          name: ''
+          name: '',
+          from_bank_add: false
         })
     });
     res.writeHead(200, {'Content-Type': 'text/html'});

@@ -32,7 +32,8 @@ router.get('/', function(req, res, next) {
             button_name: '更新',
             action: './item_update',
             payment_type: result[0].in_out_type,
-            name: result[0].name
+            name: result[0].name,
+            from_bank_add: false
           })
       });
       res.writeHead(200, {'Content-Type': 'text/html'});
