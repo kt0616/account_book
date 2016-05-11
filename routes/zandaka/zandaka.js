@@ -1,6 +1,7 @@
 var express = require('express');
 var ejs = require('ejs');
 var fs = require('fs');
+var func = require('../function.js');
 var personSQL = require('../query/person.js');
 var zandakaSQL = require('../query/zandakaQuery.js');
 var router = express.Router();
@@ -21,7 +22,7 @@ router.get('/', function(req, res, next) {
         var temp = {
           id: result.bank_id,
           bank_name: result.bank_name,
-          price: result.zandaka
+          price: func.separateNum(result.zandaka)
         }
         _results.push(temp);
       });
