@@ -17,7 +17,7 @@
     <h3 class="payment_add_marginleft form_title"><%= title %></h3>
     <% if(from == 'diff'){ %><h3 class="payment_add_marginleft">現在の金額を入れてください。</h3><% } %>
     <div class="form_item">
-      <input class="form-control numeric" type="text" name="payment_display" value="<%= paymentValue %>">
+      <input class="form-control numeric" type="text" name="payment_display" readonly="readonly" value="<%= paymentValue %>">
     </div>
 
       <div class="form_item width_max text_center">
