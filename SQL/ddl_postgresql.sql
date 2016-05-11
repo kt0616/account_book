@@ -1,3 +1,10 @@
+createuser -U postgres -P account_book;
+create database account_book;
+grant all on all tables in schema public to account_book;
+grant all on all sequences in schema public to account_book;
+grant all on all functions in schema public to account_book;
+
+
 create table person(
   person_id serial primary key,
   name varchar(10) not null,

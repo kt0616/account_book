@@ -52,6 +52,7 @@ app.use(session({
   }
 }));
 app.use('/login',routes);
+app.use('/',routes);
 app.use('/create_account', create_account);
 app.use('/setting/setting', setting);
 app.use('/setting/item_add', item_add);
