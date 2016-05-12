@@ -1,4 +1,16 @@
 <div class="payment_list">
+  <% if(err){
+    var err_str;
+    if(err == "bank_null"){
+      err_str = "銀行情報がありません";
+    }else if(err == "item_null"){
+      err_str = "項目情報がありません";
+    }
+  %>
+  <script type="text/javascript">
+    alert('<%= err_str %>');
+  </script>
+  <% } %>
   <div class="payment_list_item new_item">
     <label>
     <div onClick="javascript: location.href = '/<%if(func == 'payment'){%>payment<% }else if(func == 'monthly'){ %>setting<% } %>/<%= func %>_add'">

@@ -12,14 +12,16 @@ var payment_list_ejs = fs.readFileSync('./views/payment_list.ejs', 'UTF-8');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var user_id = req.session.user_id;
+  var err = req.query.err;
   if (user_id) {
-    printList(user_id, res);
+    printList(user_id, res, err);
   } else {
     res.redirect('/login');
   }
 });
 
-function printList(user_id, res){
+function printList(user_id, res, err){
+  if(!err) err = '';
   //ユーザー名の取得
   var callbackFunc = function(user_name){
     var _callbackFunc = function(results){
@@ -41,6 +43,7 @@ function printList(user_id, res){
         main_body: ejs.render(payment_list_ejs, {
           user_id: user_id,
           func: 'payment',
+          err: err,
           datas: datas
         })
       });

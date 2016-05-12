@@ -41,8 +41,16 @@ function printList(user_id, res){
   var callbackFunc = function(user_name){
     //銀行情報の取得
     var _callbackFunc = function(result_bank){
+      if(!result_bank.length > 0){
+        res.redirect('/payment/payment_list?err=bank_null');
+        return;
+      }
       //項目情報の取得
       var __callbackFunc = function(result_type){
+        if(!result_type.length > 0){
+          res.redirect('/payment/payment_list?err=item_null');
+          return;
+        }
         var bank_info = new Array();
         var type_info = new Array();
         var firstFlg = 1;
