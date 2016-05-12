@@ -27,6 +27,7 @@ log4js.configure({
 var loggerRequest = log4js.getLogger('request');
 exports.loggerRequestFunc = function(logStr){
   loggerRequest.info(logStr);
+  console.log(logStr);
 }
 
 // アクションログ
