@@ -31,9 +31,9 @@ function printList(user_id, res){
           sub_menu_name: item.name,
           sub_menu_link: '/setting/item_update?item_setting_id='+item.item_setting_id
         }
-        if(item.in_out_type == 0){
+        if(item.in_out_type == 1){
           in_type_item.push(tempItem);
-        }if(item.in_out_type == 1){
+        }if(item.in_out_type == 0){
           out_type_item.push(tempItem);
         }
       });
