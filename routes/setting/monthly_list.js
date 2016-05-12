@@ -41,6 +41,7 @@ function printList(user_id, res){
         main_body: ejs.render(payment_list_ejs, {
           user_id: user_id,
           func: 'monthly',
+          err: '',
           datas: datas
         })
       });
