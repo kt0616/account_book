@@ -29,10 +29,14 @@ function myValue(key){
     case 7:
     case 8:
     case 9:
-      money = money * 10 + key;
+      if(money < 1000000){
+        money = money * 10 + key;
+      }
       break;
     case '00':
-      money *= 100;
+      if(money < 100000){
+        money *= 100;
+      }
       break;
     case 'ca':
       money = 0;
