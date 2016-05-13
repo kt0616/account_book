@@ -48,7 +48,7 @@ exports.getCross = function(user_id, in_out_type, callbackFunc){
     _results.forEach(function(_result){
       sql += ', SUM(CASE WHEN ITEM_ID = '+_result.item_setting_id+' THEN ABS(PRICE) ELSE 0 END) AS ' + _result.name;
     })
-    sql += " FROM PAYMENT GROUP BY "+conn.getDateFormatYearAndMonth()+" ORDER BY "+conn.getDateFormatYearAndMonth()+" ASC;"
+    sql += " FROM PAYMENT WHERE PAYMENT.PERSON_ID = "+user_id+" AND PAYMENT.DEL_FLG = 0 GROUP BY "+conn.getDateFormatYearAndMonth()+" ORDER BY "+conn.getDateFormatYearAndMonth()+" ASC;"
 
     logger.loggerRequestFunc("SQL:getCross  "+sql);
     conn.getConnection().query(sql, function(err, result) {
