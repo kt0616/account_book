@@ -32,9 +32,9 @@ router.post('/', function(req, res, next) {
   payment.bank_id = req.body['bank_id'];
   var callbackFunc = function(result){
     payment.price = input - result.zandaka;
-    if(payment.price > 0){
+    if(payment.price < 0){
       payment.item_id = -99;
-    }else if(payment.price < 0){
+    }else if(payment.price > 0){
       payment.item_id = -98;
     }else{
       res.redirect('/payment/payment_list');

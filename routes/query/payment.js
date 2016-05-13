@@ -15,8 +15,8 @@ exports.selectPaymentList = function(user_id, callbackFunc){
 }
 
 exports.selectPaymentById = function(user_id, payment_id, callbackFunc){
-  var sql = 'SELECT PAYMENT_ID, PRICE, BANK_ID , ITEM_ID FROM PAYMENT WHERE DEL_FLG = 0 AND PERSON_ID = '+user_id+' AND PAYMENT_ID = '+payment_id;
-  logger.loggerRequestFunc("SQL:selectPaymentList  "+sql);
+  var sql = 'SELECT PAYMENT_ID, PRICE, PAYMENT.BANK_ID , BANK.BANK_NAME, ITEM_ID, ITEM_SETTING.NAME ITEM_NAME, ITEM_SETTING.IN_OUT_TYPE IN_OUT_TYPE FROM PAYMENT INNER JOIN BANK ON (PAYMENT.BANK_ID = BANK.BANK_ID AND PAYMENT.PERSON_ID = BANK.PERSON_ID) INNER JOIN ITEM_SETTING ON (PAYMENT.ITEM_ID = ITEM_SETTING.ITEM_SETTING_ID AND PAYMENT.PERSON_ID = ITEM_SETTING.PERSON_ID) WHERE PAYMENT.DEL_FLG = 0 AND PAYMENT.PERSON_ID = '+user_id+' AND PAYMENT_ID = '+payment_id;
+  logger.loggerRequestFunc("SQL:selectPaymentById  "+sql);
   conn.getConnection().query(sql, function(err, result) {
     if (err){
       logger.loggerRequestFunc("SQL ERROR:"+err);

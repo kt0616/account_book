@@ -56,10 +56,15 @@ function printList(user_id, payment_id, res){
         var ___callbackFunc = function(result_payment){
           var bank_info = new Array();
           var type_info = new Array();
+          var existFlg = 0;
+          //銀行情報の詰め込み
           result_bank.forEach(function(bank_item){
             var selected_bank = result_payment.bank_id;
             var activeFlg = 0;
-            if(selected_bank == bank_item.bank_id) activeFlg = 1;
+            if(selected_bank == bank_item.bank_id){
+              activeFlg = 1;
+              existFlg = 1;
+            }
             var temp_bank = {
               active: activeFlg,
               bank_id: bank_item.bank_id,
@@ -67,10 +72,25 @@ function printList(user_id, payment_id, res){
             }
             bank_info.push(temp_bank);
           });
+          if(existFlg == 0){
+            //削除済み・特殊なものの変更
+            var temp_bank = {
+              active: 1,
+              bank_id: result_payment.bank_id,
+              name: result_payment.bank_name
+            }
+            bank_info.push(temp_bank);
+          }
+          existFlg = 0;
+
+          //項目の詰め込み
           result_type.forEach(function(type_item){
             var selected_type = result_payment.item_id;
             var activeFlg = 0;
-            if(selected_type == type_item.item_setting_id) activeFlg = 1;
+            if(selected_type == type_item.item_setting_id) {
+              activeFlg = 1;
+              existFlg = 1;
+            }
             var temp_type = {
               active: activeFlg,
               type_id: type_item.item_setting_id,
@@ -79,6 +99,17 @@ function printList(user_id, payment_id, res){
             }
             type_info.push(temp_type);
           });
+          if(existFlg == 0){
+            //削除済み・特殊なものの変更
+            var temp_item = {
+              active: 1,
+              type_id: result_payment.item_id,
+              name: result_payment.item_name,
+              in_out: result_payment.in_out_type
+            }
+            type_info.push(temp_item);
+          }
+
           var contain = ejs.render(index_ejs, {
             title: '家計簿アプリ',
             user_id: user_id,
